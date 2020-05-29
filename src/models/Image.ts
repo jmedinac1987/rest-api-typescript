@@ -1,7 +1,7 @@
 import { Schema, model, Document } from 'mongoose'
 
 const schema = new Schema({
-    title: String,//String con s mayúscula porque es el schema de mongoose
+    title: {type: String, required: true },//String con s mayúscula porque es el schema de mongoose
     description: String,
     imagePath: String
 });
