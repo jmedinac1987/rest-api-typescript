@@ -8,7 +8,7 @@ async function getImage(req: Request, res: Response): Promise<Response> {
       return res.status(404).json({ message: "imagen no encontrada..." });
 
     return res.status(201).json(singleImage);
-  } catch (error: any) {
+  } catch (error) {
     return res.status(500).json({
       message: error.message,
     });
@@ -56,7 +56,7 @@ async function deleteImage(req: Request, res: Response): Promise<Response> {
       return res.status(404).json({ message: "imagen no encontrada..." });
 
     return res.status(201).json({ message: "Imagen eliminada con exito..." });
-  } catch (error: any) {
+  } catch (error) {
     return res.status(500).json({
       message: error.message,
     });
@@ -82,7 +82,7 @@ async function updateImage(req: Request, res: Response): Promise<Response> {
       return res.status(404).json({ message: "imagen no encontrada..." });
 
     return res.status(201).json({ message: "Imagen actualizada con exito..." });
-  } catch (error: any) {
+  } catch (error) {
     return res.status(500).json({
       message: error.message,
     });
